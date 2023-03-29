@@ -1,8 +1,0 @@
-{
-  "name": "Move show apps",
-  "description": "Put show apps icon at the first index",
-  "uuid": "moveshowapps",
-  "shell-version": [
-    "43"
-  ]
-}
