@@ -1,2 +1,2 @@
-# Move-Show-Apps
+# Show Apps at Top
 This s a gnome-shell extension.
