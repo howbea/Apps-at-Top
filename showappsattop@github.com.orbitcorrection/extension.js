@@ -20,18 +20,18 @@
 
 const Main = imports.ui.main;
 
+let viewappgrid = Main.overview.dash._showAppsIcon;
+
 class Extension {
     constructor() {
     }
 
     enable() {
-    let viewappgrid = Main.overview.dash._showAppsIcon;
 	Main.overview.dash._dashContainer.remove_child(viewappgrid);
 	Main.overview.dash._dashContainer.insert_child_at_index(viewappgrid,0);
     }
 
     disable() {
-    let viewappgrid = Main.overview.dash._showAppsIcon;
 	Main.overview.dash._dashContainer.remove_child(viewappgrid);
 	Main.overview.dash._dashContainer.add_child(viewappgrid);
     }
