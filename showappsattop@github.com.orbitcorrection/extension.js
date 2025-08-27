@@ -18,10 +18,14 @@
 
 /* exported init */
 
-import * as Main from 'resource:///org/gnome/shell/ui/main.js';
+const Main = imports.ui.main;
+
 let viewappgrid = Main.overview.dash._showAppsIcon;
 
-export default class Extension {
+class Extension {
+    constructor() {
+    }
+
     enable() {
 	Main.overview.dash._dashContainer.remove_child(viewappgrid);
 	Main.overview.dash._dashContainer.insert_child_at_index(viewappgrid,0);
@@ -31,4 +35,8 @@ export default class Extension {
 	Main.overview.dash._dashContainer.remove_child(viewappgrid);
 	Main.overview.dash._dashContainer.add_child(viewappgrid);
     }
+}
+
+function init() {
+    return new Extension();
 }
